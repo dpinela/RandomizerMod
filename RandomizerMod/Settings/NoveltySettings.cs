@@ -15,5 +15,6 @@ namespace RandomizerMod.Settings
         public bool SplitClaw;
         public bool SplitCloak;
         public bool EggShop;
+        public bool SkillUpgrades;
     }
 }

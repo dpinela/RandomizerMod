@@ -1391,6 +1391,14 @@
     "itemCandidate": true,
     "majorItem": true
   },
+  "Super_Wings": {
+    "name": "Super_Wings",
+    "pool": "SkillUpgrades",
+    "priceCap": 500,
+    "progression": true,
+    "itemCandidate": true,
+    "majorItem": false
+  },
   "Leftslash": {
     "name": "Leftslash",
     "pool": "CursedNail",
