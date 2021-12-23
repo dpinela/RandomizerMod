@@ -71,6 +71,14 @@
     "itemCandidate": true,
     "majorItem": true
   },
+  "Monarch_Wings_Upgradable": {
+    "name": "Monarch_Wings_Upgradable",
+    "pool": "Skill",
+    "priceCap": 500,
+    "progression": true,
+    "itemCandidate": true,
+    "majorItem": true
+  },
   "Shade_Cloak": {
     "name": "Shade_Cloak",
     "pool": "Skill",

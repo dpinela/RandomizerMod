@@ -168,6 +168,22 @@
     "Name": "Monarch_Wings"
   },
   {
+    "$type": "RandomizerCore.LogicItems.SingleItem, RandomizerCore",
+    "Effect": {
+      "Term": "WINGS",
+      "Value": 1
+    },
+    "Name": "Monarch_Wings_Upgradable"
+  },
+  {
+    "$type": "RandomizerCore.LogicItems.SingleItem, RandomizerCore",
+    "Effect": {
+      "Term": "WINGS",
+      "Value": 1
+    },
+    "Name": "Super_Wings"
+  },
+  {
     "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
     "Effects": [
       {

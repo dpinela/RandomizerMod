@@ -544,7 +544,7 @@ namespace RandomizerMod.RC
             if (ds.MothwingCloak && !ns.SplitCloak) dupes.Add(ItemNames.Mothwing_Cloak);
             if (ds.MantisClaw && !ns.SplitClaw) dupes.Add(ItemNames.Mantis_Claw);
             if (ds.CrystalHeart) dupes.Add(ItemNames.Crystal_Heart);
-            if (ds.MonarchWings) dupes.Add(ItemNames.Monarch_Wings);
+            if (ds.MonarchWings) dupes.Add(ns.SkillUpgrades ? ItemNames.Monarch_Wings_Upgradable : ItemNames.Monarch_Wings);
             if (ds.ShadeCloak) dupes.Add(ns.SplitCloak ? ItemNames.Split_Shade_Cloak : ItemNames.Shade_Cloak);
             if (ds.DreamNail) dupes.Add(ItemNames.Dream_Nail);
             if (ds.Dreamer) dupes.Add(ItemNames.Dreamer);
@@ -663,6 +663,14 @@ namespace RandomizerMod.RC
             if (rb.gs.PoolSettings.GrimmkinFlames && rb.gs.PoolSettings.Charms)
             {
                 rb.ReplaceItem("Grimmchild2", "Grimmchild1");
+            }
+        }
+
+        public static void ApplySkillUpgradeSetting(RequestBuilder rb)
+        {
+            if (rb.gs.NoveltySettings.SkillUpgrades && rb.gs.PoolSettings.Skills)
+            {
+                rb.ReplaceItem("Monarch_Wings", "Monarch_Wings_Upgradable");
             }
         }
 

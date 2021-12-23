@@ -98,6 +98,7 @@ namespace RandomizerMod.Settings.Presets
             if (ns.SplitClaw) sb.Append("The abilities to walljump from left and right slopes will be separated. ");
             if (ns.SplitCloak) sb.Append("The abilities to dash left and right will be separated. ");
             if (ns.EggShop) sb.Append("Jiji will trade items for rancid eggs. ");
+            if (ns.SkillUpgrades) sb.Append("The ability to triple jump will be available. ");
 
             return sb.ToString();
         }
