@@ -557,13 +557,13 @@ namespace RandomizerMod.RC
             if (ds.LevelOneSpells && !cs.RemoveSpellUpgrades)
             {
                 dupes.Add(ItemNames.Vengeful_Spirit);
-                dupes.Add(ItemNames.Desolate_Dive);
-                dupes.Add(ItemNames.Descending_Dark);
+                dupes.Add(ns.SkillUpgrades ? ItemNames.Desolate_Dive_Upgradable : ItemNames.Desolate_Dive);
+                dupes.Add(ItemNames.Howling_Wraiths);
             }
             if (ds.LevelTwoSpells && !cs.RemoveSpellUpgrades)
             {
                 dupes.Add(ItemNames.Shade_Soul);
-                dupes.Add(ItemNames.Descending_Dark);
+                dupes.Add(ns.SkillUpgrades ? ItemNames.Descending_Dark_Upgradable : ItemNames.Descending_Dark);
                 dupes.Add(ItemNames.Abyss_Shriek);
             }
             if (ds.Grimmchild)
@@ -673,6 +673,8 @@ namespace RandomizerMod.RC
             {
                 rb.ReplaceItem("Monarch_Wings", "Monarch_Wings_Upgradable");
                 rb.ReplaceItem("Crystal_Heart", "Crystal_Heart_Upgradable");
+                rb.ReplaceItem("Desolate_Dive", "Desolate_Dive_Upgradable");
+                rb.ReplaceItem("Descending_Dark", "Descending_Dark_Upgradable");
             }
         }
 

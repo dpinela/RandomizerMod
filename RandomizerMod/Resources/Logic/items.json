@@ -198,11 +198,17 @@
     "Name": "Super_Wings"
   },
   {
-    "$type": "RandomizerCore.LogicItems.SingleItem, RandomizerCore",
-    "Effect": {
-      "Term": "VERTICALSUPERDASH",
-      "Value": 1
-    },
+    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
+    "Effects": [
+      {
+        "Term": "LEFTSUPERDASH",
+        "Value": 1
+      },
+      {
+        "Term": "RIGHTSUPERDASH",
+        "Value": 1
+      }
+    ],
     "Name": "Vertical_Crystal_Heart"
   },
   {
@@ -312,6 +318,48 @@
       }
     ],
     "Name": "Descending_Dark"
+  },
+  {
+    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
+    "Effects": [
+      {
+        "Term": "QUAKE",
+        "Value": 1
+      },
+      {
+        "Term": "SPELLS",
+        "Value": 1
+      }
+    ],
+    "Name": "Desolate_Dive_Upgradable"
+  },
+  {
+    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
+    "Effects": [
+      {
+        "Term": "QUAKE",
+        "Value": 1
+      },
+      {
+        "Term": "SPELLS",
+        "Value": 1
+      }
+    ],
+    "Name": "Descending_Dark_Upgradable"
+  },
+  {
+    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
+    "Effects": [
+      {
+        "Term": "QUAKE",
+        "Value": 1
+      },
+      {
+        "Term": "SPELLS",
+        "Value": 1
+      }
+    ],
+    "Name": "Sidling_Dark"
   },
   {
     "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
