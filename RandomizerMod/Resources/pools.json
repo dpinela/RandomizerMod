@@ -169,7 +169,8 @@
     "name": "SkillUpgrade",
     "path": "NoveltySettings.SkillUpgrades",
     "includeItems": [
-      "Super_Wings"
+      "Super_Wings",
+      "Vertical_Crystal_Heart"
     ],
     "includeLocations": [],
     "vanilla": []

@@ -63,6 +63,14 @@
     "itemCandidate": true,
     "majorItem": true
   },
+  "Crystal_Heart_Upgradable": {
+    "name": "Crystal_Heart_Upgradable",
+    "pool": "Skill",
+    "priceCap": 500,
+    "progression": true,
+    "itemCandidate": true,
+    "majorItem": true
+  },
   "Monarch_Wings": {
     "name": "Monarch_Wings",
     "pool": "Skill",
@@ -1401,7 +1409,15 @@
   },
   "Super_Wings": {
     "name": "Super_Wings",
-    "pool": "SkillUpgrades",
+    "pool": "SkillUpgrade",
+    "priceCap": 500,
+    "progression": true,
+    "itemCandidate": true,
+    "majorItem": false
+  },
+  "Vertical_Crystal_Heart": {
+    "name": "Vertical_Crystal_Heart",
+    "pool": "SkillUpgrade",
     "priceCap": 500,
     "progression": true,
     "itemCandidate": true,
