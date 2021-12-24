@@ -28,6 +28,7 @@ namespace RandomizerMod.RC
 
             OnUpdate.Subscribe(0f, ApplyPoolSettings);
             OnUpdate.Subscribe(0f, ApplyGrimmchildSetting);
+            OnUpdate.Subscribe(0f, ApplySkillUpgradeSetting);
             OnUpdate.Subscribe(0f, ApplySplitCloakShadeCloakRandomize);
             OnUpdate.Subscribe(0f, ApplyProgressiveSplitClaw);
             OnUpdate.Subscribe(0f, ApplySalubraNotchesSetting);
