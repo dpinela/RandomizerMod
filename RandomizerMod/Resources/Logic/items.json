@@ -135,6 +135,20 @@
     "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
     "Effects": [
       {
+        "Term": "LEFTDASH",
+        "Value": 1
+      },
+      {
+        "Term": "RIGHTDASH",
+        "Value": 1
+      }
+    ],
+    "Name": "Mothwing_Cloak_Upgradable"
+  },
+  {
+    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
+    "Effects": [
+      {
         "Term": "LEFTCLAW",
         "Value": 1
       },
@@ -223,7 +237,35 @@
         "Value": 1
       }
     ],
+    "Name": "Doublewing_Cloak"
+  },
+  {
+    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
+    "Effects": [
+      {
+        "Term": "LEFTDASH",
+        "Value": 1
+      },
+      {
+        "Term": "RIGHTDASH",
+        "Value": 1
+      }
+    ],
     "Name": "Shade_Cloak"
+  },
+  {
+    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
+    "Effects": [
+      {
+        "Term": "LEFTDASH",
+        "Value": 1
+      },
+      {
+        "Term": "RIGHTDASH",
+        "Value": 1
+      }
+    ],
+    "Name": "Shade_Cloak_Upgradable"
   },
   {
     "$type": "RandomizerCore.LogicItems.CappedItem, RandomizerCore",

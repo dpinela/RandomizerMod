@@ -542,11 +542,11 @@ namespace RandomizerMod.RC
             PoolSettings ps = rb.gs.PoolSettings;
             List<string> dupes = new();
 
-            if (ds.MothwingCloak && !ns.SplitCloak) dupes.Add(ItemNames.Mothwing_Cloak);
+            if (ds.MothwingCloak && !ns.SplitCloak) dupes.Add(ns.SkillUpgrades ? ItemNames.Mothwing_Cloak_Upgradable : ItemNames.Mothwing_Cloak);
             if (ds.MantisClaw && !ns.SplitClaw) dupes.Add(ItemNames.Mantis_Claw);
             if (ds.CrystalHeart) dupes.Add(ns.SkillUpgrades ? ItemNames.Crystal_Heart_Upgradable : ItemNames.Crystal_Heart);
             if (ds.MonarchWings) dupes.Add(ns.SkillUpgrades ? ItemNames.Monarch_Wings_Upgradable : ItemNames.Monarch_Wings);
-            if (ds.ShadeCloak) dupes.Add(ns.SplitCloak ? ItemNames.Split_Shade_Cloak : ItemNames.Shade_Cloak);
+            if (ds.ShadeCloak) dupes.Add(ns.SplitCloak ? ItemNames.Split_Shade_Cloak : (ns.SkillUpgrades ? ItemNames.Shade_Cloak_Upgradable : ItemNames.Shade_Cloak));
             if (ds.DreamNail) dupes.Add(ItemNames.Dream_Nail);
             if (ds.Dreamer) dupes.Add(ItemNames.Dreamer);
             if (ds.SwimmingItems)
@@ -675,6 +675,8 @@ namespace RandomizerMod.RC
                 rb.ReplaceItem("Crystal_Heart", "Crystal_Heart_Upgradable");
                 rb.ReplaceItem("Desolate_Dive", "Desolate_Dive_Upgradable");
                 rb.ReplaceItem("Descending_Dark", "Descending_Dark_Upgradable");
+                rb.ReplaceItem("Mothwing_Cloak", "Mothwing_Cloak_Upgradable");
+                rb.ReplaceItem("Shade_Cloak", "Shade_Cloak_Upgradable");
             }
         }
 
