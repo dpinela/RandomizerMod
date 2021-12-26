@@ -135,20 +135,6 @@
     "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
     "Effects": [
       {
-        "Term": "LEFTDASH",
-        "Value": 1
-      },
-      {
-        "Term": "RIGHTDASH",
-        "Value": 1
-      }
-    ],
-    "Name": "Mothwing_Cloak_Upgradable"
-  },
-  {
-    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
-    "Effects": [
-      {
         "Term": "LEFTCLAW",
         "Value": 1
       },
@@ -174,34 +160,12 @@
     "Name": "Crystal_Heart"
   },
   {
-    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
-    "Effects": [
-      {
-        "Term": "LEFTSUPERDASH",
-        "Value": 1
-      },
-      {
-        "Term": "RIGHTSUPERDASH",
-        "Value": 1
-      }
-    ],
-    "Name": "Crystal_Heart_Upgradable"
-  },
-  {
     "$type": "RandomizerCore.LogicItems.SingleItem, RandomizerCore",
     "Effect": {
       "Term": "WINGS",
       "Value": 1
     },
     "Name": "Monarch_Wings"
-  },
-  {
-    "$type": "RandomizerCore.LogicItems.SingleItem, RandomizerCore",
-    "Effect": {
-      "Term": "WINGS",
-      "Value": 1
-    },
-    "Name": "Monarch_Wings_Upgradable"
   },
   {
     "$type": "RandomizerCore.LogicItems.SingleItem, RandomizerCore",
@@ -252,20 +216,6 @@
       }
     ],
     "Name": "Shade_Cloak"
-  },
-  {
-    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
-    "Effects": [
-      {
-        "Term": "LEFTDASH",
-        "Value": 1
-      },
-      {
-        "Term": "RIGHTDASH",
-        "Value": 1
-      }
-    ],
-    "Name": "Shade_Cloak_Upgradable"
   },
   {
     "$type": "RandomizerCore.LogicItems.CappedItem, RandomizerCore",
@@ -360,34 +310,6 @@
       }
     ],
     "Name": "Descending_Dark"
-  },
-  {
-    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
-    "Effects": [
-      {
-        "Term": "QUAKE",
-        "Value": 1
-      },
-      {
-        "Term": "SPELLS",
-        "Value": 1
-      }
-    ],
-    "Name": "Desolate_Dive_Upgradable"
-  },
-  {
-    "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",
-    "Effects": [
-      {
-        "Term": "QUAKE",
-        "Value": 1
-      },
-      {
-        "Term": "SPELLS",
-        "Value": 1
-      }
-    ],
-    "Name": "Descending_Dark_Upgradable"
   },
   {
     "$type": "RandomizerCore.LogicItems.MultiItem, RandomizerCore",

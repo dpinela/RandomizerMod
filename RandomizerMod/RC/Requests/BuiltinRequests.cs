@@ -542,11 +542,11 @@ namespace RandomizerMod.RC
             PoolSettings ps = rb.gs.PoolSettings;
             List<string> dupes = new();
 
-            if (ds.MothwingCloak && !ns.SplitCloak) dupes.Add(ns.SkillUpgrades ? ItemNames.Mothwing_Cloak_Upgradable : ItemNames.Mothwing_Cloak);
+            if (ds.MothwingCloak && !ns.SplitCloak) dupes.Add(ItemNames.Mothwing_Cloak);
             if (ds.MantisClaw && !ns.SplitClaw) dupes.Add(ItemNames.Mantis_Claw);
-            if (ds.CrystalHeart) dupes.Add(ns.SkillUpgrades ? ItemNames.Crystal_Heart_Upgradable : ItemNames.Crystal_Heart);
-            if (ds.MonarchWings) dupes.Add(ns.SkillUpgrades ? ItemNames.Monarch_Wings_Upgradable : ItemNames.Monarch_Wings);
-            if (ds.ShadeCloak) dupes.Add(ns.SplitCloak ? ItemNames.Split_Shade_Cloak : (ns.SkillUpgrades ? ItemNames.Shade_Cloak_Upgradable : ItemNames.Shade_Cloak));
+            if (ds.CrystalHeart) dupes.Add(ItemNames.Crystal_Heart);
+            if (ds.MonarchWings) dupes.Add(ItemNames.Monarch_Wings);
+            if (ds.ShadeCloak) dupes.Add(ns.SplitCloak ? ItemNames.Split_Shade_Cloak : ItemNames.Shade_Cloak);
             if (ds.DreamNail) dupes.Add(ItemNames.Dream_Nail);
             if (ds.Dreamer) dupes.Add(ItemNames.Dreamer);
             if (ds.SwimmingItems)
@@ -557,13 +557,13 @@ namespace RandomizerMod.RC
             if (ds.LevelOneSpells && !cs.RemoveSpellUpgrades)
             {
                 dupes.Add(ItemNames.Vengeful_Spirit);
-                dupes.Add(ns.SkillUpgrades ? ItemNames.Desolate_Dive_Upgradable : ItemNames.Desolate_Dive);
+                dupes.Add(ItemNames.Desolate_Dive);
                 dupes.Add(ItemNames.Howling_Wraiths);
             }
             if (ds.LevelTwoSpells && !cs.RemoveSpellUpgrades)
             {
                 dupes.Add(ItemNames.Shade_Soul);
-                dupes.Add(ns.SkillUpgrades ? ItemNames.Descending_Dark_Upgradable : ItemNames.Descending_Dark);
+                dupes.Add(ItemNames.Descending_Dark);
                 dupes.Add(ItemNames.Abyss_Shriek);
             }
             if (ds.Grimmchild)
@@ -669,15 +669,26 @@ namespace RandomizerMod.RC
 
         public static void ApplySkillUpgradeSetting(RequestBuilder rb)
         {
-            if (rb.gs.NoveltySettings.SkillUpgrades && rb.gs.PoolSettings.Skills)
+            if (rb.gs.NoveltySettings.SkillUpgrades)
             {
-                rb.ReplaceItem("Monarch_Wings", "Monarch_Wings_Upgradable");
-                rb.ReplaceItem("Crystal_Heart", "Crystal_Heart_Upgradable");
-                rb.ReplaceItem("Desolate_Dive", "Desolate_Dive_Upgradable");
-                rb.ReplaceItem("Descending_Dark", "Descending_Dark_Upgradable");
-                rb.ReplaceItem("Mothwing_Cloak", "Mothwing_Cloak_Upgradable");
-                rb.ReplaceItem("Shade_Cloak", "Shade_Cloak_Upgradable");
+                SetSuccessor(rb, ItemNames.Monarch_Wings, ItemNames.Super_Wings);
+                SetSuccessor(rb, ItemNames.Crystal_Heart, ItemNames.Vertical_Crystal_Heart);
+                SetSuccessor(rb, ItemNames.Descending_Dark, ItemNames.Sidling_Dark);
+                SetSuccessor(rb, ItemNames.Shade_Cloak, ItemNames.Doublewing_Cloak);
             }
+        }
+
+        private static void SetSuccessor(RequestBuilder rb, string target, string succ)
+        {
+            rb.EditItemInfo(target, info =>
+            {
+                info.realItemCreator = (factory, placement) =>
+                {
+                    var item = factory.MakeItem(target);
+                    item.GetTag<ItemChanger.Tags.ItemChainTag>().successor = succ;
+                    return item;
+                };
+            });
         }
 
         public static void ApplySalubraNotchesSetting(RequestBuilder rb)
@@ -730,6 +741,10 @@ namespace RandomizerMod.RC
             {
                 rb.RemoveItemByName("Mothwing_Cloak");
                 rb.RemoveItemByName("Shade_Cloak");
+                if (rb.gs.NoveltySettings.SkillUpgrades)
+                {
+                    rb.RemoveItemByName("Doublewing_Cloak");
+                }
             }
         }
 
